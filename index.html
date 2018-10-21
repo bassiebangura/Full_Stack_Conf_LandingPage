@@ -10,6 +10,34 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
   </head>
   <body>
+    <!-- nav bar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+      <a class="navbar-brand order-1 mr-0" href="https://www.teamtreehouse.com" target="_blank">Presented By Programmer4Christ</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="#about">About</a>
+          <a class="nav-item nav-link" href="#speakers">Speakers</a>
+          <a class="nav-item nav-link " href="#schedule">Schedule</a>
+        </div>
+      </div>        
+    </nav><!-- /nav bar-->
+    <!-- jumbotron -->
+    <div class="jumbotron jumbotron-fluid bg-info text-white">
+        <div class="container text-center pt-4">
+          <h1 class="display-1">Full Stack Conf</h1>
+          <p class="lead">A One-day Conference About Everything JavaScript.</p>
+          <div class="btn-group mt-4" role="group" aria-label="callout buttons">
+              <button type="button" class="btn btn-secondary btn-lg">Register Now</button>
+              <a href="#speakers" class="btn btn-light btn-lg">See Speakers</a>
+            </div>
+        </div>
+    </div>
+    <!-- /jumbotro -->
     <div class="container pt-4">
         <!-- about -->
         <!-- git functional test-->
@@ -40,14 +68,79 @@
         </div><!-- /about -->
 
         <!-- Speakers -->
-        <h1 class="display-4 text-center my-5 text-muted">Speakers</h1>
-        [Speakers bios goes here]
-        <!-- /speakers -->
+        <h1 id="speakers" class="display-4 text-center my-5 text-muted">Speakers</h1>
+        <div class="row">
+          <div class="col-md-6 col-lg-4">
+            <div class="card mb-3">
+                <img class="card-img-top" src="img/ecma.png" alt="ecma">
+                <div class="card-body">
+                  <h5 class="card-title">Ecma McRae</h5>
+                  <p class="card-text">A web developer at Google headquarters. A JavaScript enthusiat and loves to teach
+                    aspiring developers. 
+                  </p>
+                </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card mb-3">
+                <img class="card-img-top" src="img/jay.png" alt="jay">
+                <div class="card-body">
+                  <h5 class="card-title">Jay Bangura</h5>
+                  <p class="card-text">A web developer at Google headquarters. A JavaScript enthusiat and loves to teach
+                      aspiring developers.</p>
+                </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card mb-3">
+                <img class="card-img-top" src="img/json.png" alt="json">
+                <div class="card-body">
+                  <h5 class="card-title">Json Bangura</h5>
+                  <p class="card-text">A web developer at Google headquarters. A JavaScript enthusiat and loves to teach
+                      aspiring developers.</p>
+                </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card mb-3">
+                <img class="card-img-top" src="img/robbie.png" alt="robbie">
+                <div class="card-body">
+                  <h5 class="card-title">Robbie Savage</h5>
+                  <p class="card-text">A web developer at Google headquarters. A JavaScript enthusiat and loves to teach
+                      aspiring developers.</p>
+                </div>
+              </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card mb-3">
+                <img class="card-img-top" src="img/vivianne.png" alt="vivianne">
+                <div class="card-body">
+                  <h5 class="card-title">vivianne Love</h5>
+                  <p class="card-text">A web developer at Google headquarters. A JavaScript enthusiat and loves to teach
+                      aspiring developers.</p>
+                </div>
+              </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card mb-3">
+                <img class="card-img-top" src="img/nodestradamus.png" alt="nodestradamus">
+                <div class="card-body">
+                  <h5 class="card-title">Nodestradamus</h5>
+                  <p class="card-text">A web developer at Google headquarters. A JavaScript enthusiat and loves to teach
+                      aspiring developers.</p>
+                </div>
+            </div>
+          </div>
+        </div><!-- /speakers -->
 
         <!-- Schedule -->
         <h1 class="display-4 text-center my-5 text-muted">Schedule</h1>
         [Schedule goes here]
         <!-- /schedule -->
+
+        <!-- callout button-->
+        <button type="button" class="btn btn-outline-info btn-lg d-block mx-auto my-5">Don't miss out, register now.</button>
+        <!-- /callout button-->
 
         <!-- sign up form-->
         <hr>
@@ -65,8 +158,39 @@
 			      </span>    
                 </div>  
             </div>
-        </div><!-- /sign up form-->
-        <hr>
+        </div>
+        <hr><!-- /sign up form-->
+        <!-- footer -->
+        <div class="row">
+          <div class="col-md-7">
+              <ul class="nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Community</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Tracks</a>
+                  </li>
+                  <li class="nav-item">
+                    <!-- Dropdown button -->
+                    <div class="btn-group dropup">
+                        <button type="button" class="btn btn-outline-secondary">Other Confs</button>
+                        <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">CSS Conf</a>
+                          <a class="dropdown-item" href="#">Python Conf</a>
+                          <a class="dropdown-item" href="#">Java Conf</a>
+                          <a class="dropdown-item" href="#">Swift</a>
+                        </div>
+                      </div><!-- /Dropdown button -->
+                  </li>
+              </ul>
+          </div>
+          <div class="col-md text-md-right">
+            <small>&copy; 2017 Full Stack Conf &amp; Treehouse</small>
+          </div>
+        </div><!-- /footer -->
 
       </div><!-- /.container -->
     <!-- Optional JavaScript -->
