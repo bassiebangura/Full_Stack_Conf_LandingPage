@@ -9,9 +9,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
   </head>
-  <body>
+  <body id="home" data-spy="scroll" data-target=".navbar" data-offset="100">
     <!-- nav bar-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
       <div class="container">
       <a class="navbar-brand order-1 mr-0" href="https://www.teamtreehouse.com" target="_blank">Presented By Programmer4Christ</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,7 +19,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-item nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
           <a class="nav-item nav-link" href="#about">About</a>
           <a class="nav-item nav-link" href="#speakers">Speakers</a>
           <a class="nav-item nav-link " href="#schedule">Schedule</a>
@@ -27,23 +27,25 @@
       </div>        
     </nav><!-- /nav bar-->
     <!-- jumbotron -->
-    <div class="jumbotron jumbotron-fluid bg-info text-white">
-        <div class="container text-center pt-4">
+    <div class="jumbotron jumbotron-fluid bg-info text-white mt-5">
+        <div class="container text-center pt-5">
           <h1 class="display-1">Full Stack Conf</h1>
           <p class="lead">A One-day Conference About Everything JavaScript.</p>
           <div class="btn-group mt-4" role="group" aria-label="callout buttons">
-              <button type="button" class="btn btn-secondary btn-lg">Register Now</button>
+              <!-- register button -->
+              <button type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#register">Register Now</button>
+              <!-- /register button-->
               <a href="#speakers" class="btn btn-light btn-lg">See Speakers</a>
-            </div>
+          </div>
         </div>
     </div>
     <!-- /jumbotro -->
     <div class="container pt-4">
+
         <!-- about -->
-        <!-- git functional test-->
-        <div class="row">
+        <div  class="row">
             <div class="col-lg order-lg-2">
-                <h3 class="mb-4">About Full Stack Conf</h3>
+                <h3 id="about" class="mb-4">About Full Stack Conf</h3>
                     <img src="img/pdx.jpg" alt="Portland"  class="img-fluid mb-4 rounded d-none d-sm-block">
                     <p>The beautiful city of Portland, Oregon will be the host city for Full Stack Conf!</p>
                     <p>Explore the future of JavaScript with a lineup of industry professionals. Discover new techniques to advance your career as a web developer.</p>
@@ -56,13 +58,13 @@
             </div>
             <div class="col-lg order-lg-3">
                 <h3 class="mb-4">What You'll Learn</h3>
-                    <ul>
-                        <li><strong>MongoDB</strong>: NoSQL database</li>
-                        <li><strong>Express</strong>: Framework for Node</li>
-                        <li><strong>React</strong>: JavaScript library</li>
-                        <li><strong>Node.js</strong>: JavaScript environment</li>
-                        <li><strong>ES2015</strong>: Latest version of JavaScript</li>
-                        <li><strong>Babel</strong>: JavaScript compiler</li>
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-action"><strong>MongoDB</strong>: NoSQL database</li>
+                        <li class="list-group-item list-group-item-action"><strong>Express</strong>: Framework for Node</li>
+                        <li class="list-group-item list-group-item-action"><strong>React</strong>: JavaScript library</li>
+                        <li class="list-group-item list-group-item-action"><strong>Node.js</strong>: JavaScript environment</li>
+                        <li class="list-group-item list-group-item-action"><strong>ES2015</strong>: Latest version of JavaScript</li>
+                        <li class="list-group-item list-group-item-action"><strong>Babel</strong>: JavaScript compiler</li>
                     </ul>
             </div>    
         </div><!-- /about -->
@@ -134,12 +136,58 @@
         </div><!-- /speakers -->
 
         <!-- Schedule -->
-        <h1 class="display-4 text-center my-5 text-muted">Schedule</h1>
-        [Schedule goes here]
+        <h1 id="schedule" class="display-4 text-center my-5 text-muted">Schedule</h1>
+        <ul class="list-group">
+          <li class="list-group-item border-top-0 border-right-0 border-left-0">
+            <div class="d-flex justify-content-between">
+              <div>
+                <h5>Keynote: Internet Of Things</h5>
+                <p class="mb-0">Nodestradamus</p>
+              </div>
+              <span class="badge badge-info pt-3">9:00am</span>
+            </div>
+          </li>
+          <li class="list-group-item border-right-0 border-left-0">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <h5>Keynote: Internet Of Things</h5>
+                  <p class="mb-0">Nodestradamus</p>
+                </div>
+                <span class="badge badge-info pt-3">9:00am</span>
+              </div>
+          </li>
+          <li class="list-group-item border-right-0 border-left-0">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <h5>Keynote: Internet Of Things</h5>
+                  <p class="mb-0">Nodestradamus</p>
+                </div>
+                <span class="badge badge-info pt-3">9:00am</span>
+              </div>
+          </li>
+          <li class="list-group-item border-right-0 border-left-0 list-group-item-success">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <h5>Keynote: Internet Of Things</h5>
+                  <p class="mb-0">Nodestradamus</p>
+                </div>
+                <span class="badge badge-info pt-3">9:00am</span>
+              </div>
+          </li>
+          <li class="list-group-item border-right-0 border-left-0">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <h5>Keynote: Internet Of Things</h5>
+                  <p class="mb-0">Nodestradamus</p>
+                </div>
+                <span class="badge badge-info pt-3">9:00am</span>
+              </div>
+          </li>
+        </ul>
         <!-- /schedule -->
 
         <!-- callout button-->
-        <button type="button" class="btn btn-outline-info btn-lg d-block mx-auto my-5">Don't miss out, register now.</button>
+        <button type="button" class="btn btn-outline-info btn-lg d-block mx-auto my-5" data-toggle="modal" data-target="#register">Don't miss out, register now.</button>
         <!-- /callout button-->
 
         <!-- sign up form-->
@@ -193,6 +241,132 @@
         </div><!-- /footer -->
 
       </div><!-- /.container -->
+    <!-- ===================================
+                FORM MODAL 
+    ===================================== -->
+    <div class="modal fade " id="register" tabindex="-1" role="dialog" aria-labelledby="register form" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header bg-info text-white">
+              <h5 class="modal-title" id="exampleModalLabel">Register for Full Stack Conf</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                  <strong>Hurry!</strong> Early registration ends in two days.
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+            <!-- Registration Form-->
+              <form>
+                <h5 class="mb-3">Basic Info</h5>
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control" id="name" aria-describedby="enterName" placeholder="Enter Your Full Name">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter Email">
+                </div>
+                <div class="form-group">
+                  <label for="role">Job Role:</label>
+                  <select class="form-control custom-select" id="role">
+                    <option value="designer">Designer</option>
+                    <option value="designer">Designer</option>
+                    <option value="designer">Designer</option>
+                    <option value="designer">Designer</option>
+                    <option value="designer">Designer</option>
+                    <option value="designer">Designer</option>
+                  </select>  
+                </div>
+
+                <hr class="my-4">
+                <h5 class="mb-2">Which Topics Interest You Most?</h5>
+                <div class="container">
+                  <div class="form-group form-check">
+                      <input type="checkbox" class="form-check-input mt-2.2" id="interest">
+                      <label class="form-check-label pl-0" for="nterest">Javascript</label>
+                  </div>
+                  <div class="form-group form-check">
+                      <input type="checkbox" class="form-check-input mt-2.2" id="interest">
+                      <label class="form-check-label pl-0" for="nterest">Front End Development</label>
+                  </div>
+                  <div class="form-group form-check">
+                      <input type="checkbox" class="form-check-input mt-2.2" id="interest">
+                      <label class="form-check-label pl-0" for="nterest">Javascript Frameworks</label>
+                  </div>
+                  <div class="form-group form-check">
+                      <input type="checkbox" class="form-check-input mt-2.2" id="interest">
+                      <label class="form-check-label pl-0" for="nterest">Javascript Full Stack</label>
+                  </div>
+                  <div class="form-group form-check">
+                      <input type="checkbox" class="form-check-input mt-2.2" id="interest">
+                      <label class="form-check-label pl-0" for="nterest">Full Stack Web Development</label>
+                  </div>
+                </div>
+                <!-- payment info-->
+                <hr class="my-4">
+                <h5 mb-4>Payment info</h5>
+                <div class="form-group">
+                    <label for="nameOnCard">Name On Card</label>
+                    <input type="text" class="form-control" id="nameOnCard" aria-describedby="enterName" placeholder="Enter Name On Card">
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-lg-6">
+                        <label for="name">Card Number:</label>
+                        <input type="text" class="form-control" id="cardNumber" aria-describedby="cardnumber" placeholder=" ">
+                    </div>
+                    <div class="form-group col-lg">
+                        <label for="name">Zip Code:</label>
+                        <input type="text" class="form-control" id="zipCode" aria-describedby="zipcode" placeholder=" ">
+                    </div>
+                    <div class="form-group col-lg">
+                        <label for="name">CVV:</label>
+                        <input type="text" class="form-control" id="cvv" aria-describedby="cvv" placeholder=" ">
+                    </div>
+                </div>
+                <div class="form-row">
+                  <label for="expirationdate" class="col-lg-12">Expiration Date:</label>
+                  <div class="col">
+                    <select class="custom-select form-control" id="exp-month">
+                      <option value="1">1 - January</option>
+                      <option value="2">2 - February</option>
+                      <option value="3">3 - March</option>
+                      <option value="4">4 - April</option>
+                      <option value="5">5 - May</option>
+                      <option value="6">6 - June</option>
+                      <option value="7">7 - July</option>
+                      <option value="8">8 - August</option>
+                      <option value="9">9 - September</option>
+                      <option value="10">10 - October</option>
+                      <option value="11">11 - November</option> 
+                      <option value="12">12 - December</option>
+                    </select> 
+                  </div>
+                  <div class="col">
+                    <select class="custom-select form-control" id="exp-year">
+                      <option value="2016">2016</option>
+                      <option value="2017">2017</option>
+                      <option value="2018">2018</option>
+                      <option value="2019">2019</option>
+                      <option value="2020">2020</option>
+                    </select> 
+                  </div>
+                </div><!-- /payment info-->
+                <hr my-4>
+                <button type="button" class="btn btn-primary btn-lg">
+                  Register
+                </button>
+              </form>
+              <!-- /Registration Form-->
+            </div>
+          </div>
+        </div>
+      </div><!-- /MODAL FORM-->
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
